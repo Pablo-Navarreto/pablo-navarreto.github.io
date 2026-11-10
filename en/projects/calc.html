@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CALC</title>
+  <meta name="description" content="Case study: a tool to calculate and quote steel structures, with a floor plan, 3D view and bar cutting optimization. By Pablo Navarreto.">
+  <link rel="canonical" href="https://pablo-navarreto.github.io/en/projects/calc.html">
+  <link rel="alternate" hreflang="es" href="https://pablo-navarreto.github.io/proyectos/calc.html">
+  <link rel="alternate" hreflang="pt" href="https://pablo-navarreto.github.io/pt/projetos/calc.html">
+  <link rel="alternate" hreflang="en" href="https://pablo-navarreto.github.io/en/projects/calc.html">
+  <link rel="alternate" hreflang="x-default" href="https://pablo-navarreto.github.io/proyectos/calc.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CALC">
+  <meta property="og:description" content="Case study: a tool to calculate and quote steel structures, with a floor plan, 3D view and bar cutting optimization. By Pablo Navarreto.">
+  <meta property="og:url" content="https://pablo-navarreto.github.io/en/projects/calc.html">
+  <meta property="og:image" content="https://pablo-navarreto.github.io/compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+
+<header class="contenedor barra">
+  <a class="marca" href="/en/">Pablo Navarreto</a>
+  <nav aria-label="Projects">
+    <a href="#problema">Problem</a>
+    <a href="#arquitectura">Architecture</a>
+    <a href="#seguridad">Security</a>
+    <a href="/en/#contacto">Contact</a>
+  </nav>
+  <div class="idiomas" role="group" aria-label="Language"><a href="/proyectos/calc.html" hreflang="es" lang="es" data-idioma="es">ES</a><a href="/pt/projetos/calc.html" hreflang="pt" lang="pt" data-idioma="pt">PT</a><a href="/en/projects/calc.html" hreflang="en" lang="en" data-idioma="en" aria-current="true">EN</a></div>
+</header>
+
+<main>
+  <section class="contenedor caso-portada">
+    <a class="volver" href="/en/#proyectos">Back to projects</a>
+    <h1>CALC</h1>
+    <p class="intro">The tool Pablo's Serralheria uses to calculate and quote steel structures such as mezzanines, stairs and roofs. The job is laid out on a floor plan, seen in 3D, and out come the weight, the bars to buy, how to cut them and the price.</p>
+    <dl class="ficha">
+      <div><dt>My role</dt><dd>Design, direction and deployment</dd></div>
+      <div><dt>Year</dt><dd>2026</dd></div>
+      <div><dt>Status</dt><dd>In production since August 2026</dd></div>
+      <div><dt>Stack</dt><dd>JavaScript, PHP 8, MySQL, WebGL</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="problema" aria-labelledby="t-problema">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-problema">The problem</h2>
+        <p>Quoting a structure by hand is slow, and getting it wrong costs money.</p>
+        <ul>
+          <li>The steel weight had to be added up piece by piece.</li>
+          <li>Bars come in 6 meter lengths: cut them badly and the leftover goes to waste.</li>
+          <li>A quote by eye can be off by up to 40 %. One done piece by piece, around 10 %.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>The solution</h2>
+        <p>A tool in the browser where you draw the job and everything else comes out on its own, instantly.</p>
+        <ul>
+          <li>Columns, beams, stairs and railings go on a floor plan, and the job shows up in 3D.</li>
+          <li>An algorithm decides how to cut the bars to waste as little as possible.</li>
+          <li>The price comes from the real weight, and the quote goes to FinanceIA in one click.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="pantallas" aria-labelledby="t-pantallas">
+    <h2 id="t-pantallas">The system at work</h2>
+    <p>Screenshots of a copy of the tool with a made-up project: an 8 x 6 meter mezzanine. The calculations are the real ones. The screens are in Portuguese, the company's language.</p>
+    <div class="capturas">
+      <figure><a href="/capturas/calc/vista-3d.webp" aria-label="Open the full-size image: 3D view"><img src="/capturas/calc/vista-3d.webp" alt="3D view. The job in 3D, drawn with custom math. It rotates so you can see it from every side." width="1920" height="1200" loading="lazy"></a><figcaption><strong>3D view</strong> The job in 3D, drawn with custom math. It rotates so you can see it from every side.</figcaption></figure>
+      <figure><a href="/capturas/calc/montador.webp" aria-label="Open the full-size image: Assembler"><img src="/capturas/calc/montador.webp" alt="Assembler. The plan with every piece numbered and measured, next to the 3D view." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Assembler</strong> The plan with every piece numbered and measured, next to the 3D view.</figcaption></figure>
+      <figure><a href="/capturas/calc/cortes.webp" aria-label="Open the full-size image: Cutting each bar"><img src="/capturas/calc/cortes.webp" alt="Cutting each bar. How to cut each 6 meter bar, what is left for stock and what is scrap." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Cutting each bar</strong> How to cut each 6 meter bar, what is left for stock and what is scrap.</figcaption></figure>
+      <figure><a href="/capturas/calc/pecas.webp" aria-label="Open the full-size image: Pieces"><img src="/capturas/calc/pecas.webp" alt="Pieces. Each piece with its profile, length, quantity and weight." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Pieces</strong> Each piece with its profile, length, quantity and weight.</figcaption></figure>
+      <figure><a href="/capturas/calc/orcamento.webp" aria-label="Open the full-size image: Quote"><img src="/capturas/calc/orcamento.webp" alt="Quote. The price and the real cost: steel, paint, welding and discs." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Quote</strong> The price and the real cost: steel, paint, welding and discs.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-cifras">
+    <h2 id="t-cifras">By the numbers</h2>
+    <dl class="cifras cifras-seis">
+      <div><dt>Parts</dt><dd>7</dd></div>
+      <div><dt>Own tables</dt><dd>3</dd></div>
+      <div><dt>Functions</dt><dd>276</dd></div>
+      <div><dt>Commits</dt><dd>265</dd></div>
+      <div><dt>Lines of code</dt><dd>10k</dd></div>
+      <div><dt>Steel (kg/m³)</dt><dd>7.850</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="arquitectura" aria-labelledby="t-arq">
+    <h2 id="t-arq">How it's built</h2>
+    <p>Almost everything runs in the browser: change a measurement and the result appears instantly. The server only stores projects and photos and sends the quote to FinanceIA.</p>
+    <div class="capas" role="img" aria-label="Diagram: the browser does the calculation, the plan and the 3D; the PHP server stores data in MySQL and sends the quote to FinanceIA.">
+      <div class="capa"><h3>Screens</h3><p class="tec">JavaScript, SVG, WebGL</p><p>Calculation engine, PDF reader, plan and 3D, all in one file.</p></div>
+      <div class="enlace"><span>JSON requests and responses</span></div>
+      <div>
+        <div class="capa"><h3>Server</h3><p class="tec">PHP 8, 6 files</p><p>Checks the session and that the project belongs to the user, stores projects and photos.</p></div>
+        <div class="externos">
+          <div class="capa"><h3>FinanceIA</h3><p>Receives the quote as a draft, with its items and materials.</p></div>
+        </div>
+      </div>
+      <div class="enlace"><span>SQL queries</span></div>
+      <div class="capa"><h3>Database</h3><p class="tec">MariaDB (MySQL)</p><p>The same database as FinanceIA: users sign in with the same account.</p></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-modulos">
+    <h2 id="t-modulos">The 7 parts</h2>
+    <p>Every job is a project, and inside it is everything needed to build it.</p>
+    <div class="modulos">
+      <div class="modulo centro"><strong>Assembler</strong><span>The job's floor plan: columns, truss beams, joists, stairs, railings and floor, with measurements and in 3D.</span></div>
+      <div class="modulo"><strong>Projects</strong><span>Each job with its stage (quote, purchase, cutting, welding, painting, assembly), details, photos and videos.</span></div>
+      <div class="modulo"><strong>Profile catalog</strong><span>Tubes, U profiles and plates, with their weight per meter.</span></div>
+      <div class="modulo"><strong>PDF reader</strong><span>Reads the parts list from the engineer's project.</span></div>
+      <div class="modulo"><strong>Cutting engine</strong><span>Decides how to cut each 6 meter bar to waste as little as possible.</span></div>
+      <div class="modulo"><strong>Cutting sheet</strong><span>The bars to buy and how to cut each one, as a PDF for the shop.</span></div>
+      <div class="modulo"><strong>Quote</strong><span>Price per kilo, per square meter or itemized, and it goes to FinanceIA.</span></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-viaje">
+    <h2 id="t-viaje">The journey of a piece of data</h2>
+    <p>What happens, step by step, from the floor plan to the quote.</p>
+    <div class="viaje" id="viaje">
+      <span class="pulso" aria-hidden="true"></span>
+      <ol>
+        <li><span class="num">1</span><div><h3>The job is laid out</h3><p>In the assembler, columns, beams, stairs and railings are placed on the plan.</p></div></li>
+        <li><span class="num">2</span><div><h3>Pieces come out</h3><p>Each element becomes pieces with their profile, length and quantity.</p></div></li>
+        <li><span class="num">3</span><div><h3>One formula</h3><p>Each piece's weight is its volume times the density of steel, 7,850 kg/m³.</p></div></li>
+        <li><span class="num">4</span><div><h3>The cutting engine</h3><p>Pieces are sorted from longest to shortest and each goes into the first bar where it fits (First Fit Decreasing). It subtracts the saw blade width and splices any piece longer than a bar.</p></div></li>
+        <li><span class="num">5</span><div><h3>Sheet for the shop</h3><p>Bars cut the same way are grouped: 8 bars like this, 6 bars like that.</p></div></li>
+        <li><span class="num">6</span><div><h3>The price</h3><p>Steel, paint, welding wire, gas and cutting discs, and the final price.</p></div></li>
+        <li><span class="num">7</span><div><h3>To FinanceIA</h3><p>In a single database transaction, with the quote number locked so it never repeats, the quote is created as a draft.</p></div></li>
+        <li><span class="num">8</span><div><h3>A person signs off</h3><p>The quote stays a draft until Pablo reviews it and sends it to the client.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="seguridad" aria-labelledby="t-seg">
+    <h2 id="t-seg">Security</h2>
+    <p>It is an internal tool, but it stores clients' projects and photos.</p>
+    <table class="tabla">
+      <tbody>
+        <tr><th scope="row">Passwords</th><td>Hashed, never as plain text. The same account as FinanceIA.</td></tr>
+        <tr><th scope="row">Login attempts</th><td>Limited per IP.</td></tr>
+        <tr><th scope="row">Each user's data</th><td>Every query filters by user: nobody sees someone else's projects.</td></tr>
+        <tr><th scope="row">Database queries</th><td>Prepared statements, so nobody can inject malicious code.</td></tr>
+        <tr><th scope="row">Photos and videos</th><td>Outside the public folder, per user and project.</td></tr>
+        <tr><th scope="row">Keys</th><td>Only on the server, outside Git.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-calidad">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-calidad">Quality and delivery</h2>
+        <ul>
+          <li>Used on real jobs at the shop since August 2026.</li>
+          <li>Every formula is explained for people in a separate document, with its standards.</li>
+          <li>The design follows the same interface guide as FinanceIA: both look the same.</li>
+          <li>Backup of the previous version before every deploy.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>What I'd do next</h2>
+        <ul>
+          <li>Split the large file into modules with React and TypeScript, as in Global-VZLA App.</li>
+          <li>Automated tests for the cutting engine, so it never breaks silently.</li>
+          <li>Try an exact cutting algorithm for large jobs.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-papel">
+    <div class="papel">
+      <h2 id="t-papel">My role</h2>
+      <p>I built this tool with AI agents (Claude Code) for Pablo's Serralheria. I set the shop's rules (saw blade width, splices, how a truss is cut), approved every screen, tested it on real jobs and put it into production. The AI wrote much of the code under those rules.</p>
+      <p>This is where my engineering background meets development: I understand and review the calculation side myself.</p>
+    </div>
+    <div class="siguiente">
+      <a class="boton principal" href="/en/#contacto">Let's talk</a>
+      <a class="boton" href="/en/#proyectos">See other projects</a>
+    </div>
+  </section>
+</main>
+
+<footer class="contenedor pie">
+  <p>The code is private. The screenshots use a made-up project: client and measurements are fictional.</p>
+</footer>
+<script>
+  document.querySelectorAll('.idiomas a').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('idioma', a.dataset.idioma); } catch (e) {} });
+  });
+</script>
+<script>
+  (function () {
+    var viaje = document.getElementById('viaje');
+    if (!viaje || !('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { viaje.classList.add('activo'); obs.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    obs.observe(viaje);
+  })();
+</script>
+</body>
+</html>

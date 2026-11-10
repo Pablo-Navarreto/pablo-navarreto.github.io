@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CALC</title>
+  <meta name="description" content="Caso de estudio: herramienta para calcular y presupuestar estructuras metálicas, con planta, vista 3D y optimización del corte de barras. Por Pablo Navarreto.">
+  <link rel="canonical" href="https://pablo-navarreto.github.io/proyectos/calc.html">
+  <link rel="alternate" hreflang="es" href="https://pablo-navarreto.github.io/proyectos/calc.html">
+  <link rel="alternate" hreflang="pt" href="https://pablo-navarreto.github.io/pt/projetos/calc.html">
+  <link rel="alternate" hreflang="en" href="https://pablo-navarreto.github.io/en/projects/calc.html">
+  <link rel="alternate" hreflang="x-default" href="https://pablo-navarreto.github.io/proyectos/calc.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CALC">
+  <meta property="og:description" content="Caso de estudio: herramienta para calcular y presupuestar estructuras metálicas, con planta, vista 3D y optimización del corte de barras. Por Pablo Navarreto.">
+  <meta property="og:url" content="https://pablo-navarreto.github.io/proyectos/calc.html">
+  <meta property="og:image" content="https://pablo-navarreto.github.io/compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+
+<header class="contenedor barra">
+  <a class="marca" href="/">Pablo Navarreto</a>
+  <nav aria-label="Proyectos">
+    <a href="#problema">Problema</a>
+    <a href="#arquitectura">Arquitectura</a>
+    <a href="#seguridad">Seguridad</a>
+    <a href="/#contacto">Contacto</a>
+  </nav>
+  <div class="idiomas" role="group" aria-label="Idioma"><a href="/proyectos/calc.html" hreflang="es" lang="es" data-idioma="es" aria-current="true">ES</a><a href="/pt/projetos/calc.html" hreflang="pt" lang="pt" data-idioma="pt">PT</a><a href="/en/projects/calc.html" hreflang="en" lang="en" data-idioma="en">EN</a></div>
+</header>
+
+<main>
+  <section class="contenedor caso-portada">
+    <a class="volver" href="/#proyectos">Volver a proyectos</a>
+    <h1>CALC</h1>
+    <p class="intro">La herramienta con la que Pablo's Serralheria calcula y presupuesta estructuras metálicas, como mezaninos, escaleras y coberturas. Se arma la obra en una planta, se ve en 3D y salen el peso, las barras a comprar, cómo cortarlas y el precio.</p>
+    <dl class="ficha">
+      <div><dt>Mi papel</dt><dd>Diseño, dirección y puesta en producción</dd></div>
+      <div><dt>Año</dt><dd>2026</dd></div>
+      <div><dt>Estado</dt><dd>En producción desde agosto de 2026</dd></div>
+      <div><dt>Tecnología</dt><dd>JavaScript, PHP 8, MySQL, WebGL</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="problema" aria-labelledby="t-problema">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-problema">El problema</h2>
+        <p>Presupuestar una estructura a mano es lento, y si sale mal se pierde dinero.</p>
+        <ul>
+          <li>Había que sumar pieza por pieza el peso del acero.</li>
+          <li>Las barras vienen de 6 metros: si se cortan mal, sobra material que se tira.</li>
+          <li>Un presupuesto hecho a ojo tiene un error de hasta 40 %. Uno pieza por pieza, cerca del 10 %.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>La solución</h2>
+        <p>Una herramienta en el navegador donde se dibuja la obra y todo lo demás sale solo, al instante.</p>
+        <ul>
+          <li>Se ponen pilares, vigas, escaleras y barandas en una planta, y la obra se ve en 3D.</li>
+          <li>Un algoritmo decide cómo cortar las barras para perder lo menos posible.</li>
+          <li>El precio sale del peso real, y el presupuesto pasa a FinanceIA con un clic.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="pantallas" aria-labelledby="t-pantallas">
+    <h2 id="t-pantallas">El sistema funcionando</h2>
+    <p>Capturas de una copia de la herramienta con un proyecto inventado: un mezanino de 8 x 6 metros. Los cálculos son los reales. Las pantallas están en portugués, el idioma de la empresa.</p>
+    <div class="capturas">
+      <figure><a href="/capturas/calc/vista-3d.webp" aria-label="Abrir la imagen en grande: Vista 3D"><img src="/capturas/calc/vista-3d.webp" alt="Vista 3D. La obra en 3D, dibujada con matemática propia. Se gira y se mira por todos lados." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Vista 3D</strong> La obra en 3D, dibujada con matemática propia. Se gira y se mira por todos lados.</figcaption></figure>
+      <figure><a href="/capturas/calc/montador.webp" aria-label="Abrir la imagen en grande: Montador"><img src="/capturas/calc/montador.webp" alt="Montador. La planta con cada pieza numerada y sus medidas, al lado del 3D." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Montador</strong> La planta con cada pieza numerada y sus medidas, al lado del 3D.</figcaption></figure>
+      <figure><a href="/capturas/calc/cortes.webp" aria-label="Abrir la imagen en grande: Corte de cada barra"><img src="/capturas/calc/cortes.webp" alt="Corte de cada barra. Cómo cortar cada barra de 6 metros, qué sobra para el depósito y qué es chatarra." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Corte de cada barra</strong> Cómo cortar cada barra de 6 metros, qué sobra para el depósito y qué es chatarra.</figcaption></figure>
+      <figure><a href="/capturas/calc/pecas.webp" aria-label="Abrir la imagen en grande: Piezas"><img src="/capturas/calc/pecas.webp" alt="Piezas. Cada pieza con su perfil, su medida, su cantidad y su peso." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Piezas</strong> Cada pieza con su perfil, su medida, su cantidad y su peso.</figcaption></figure>
+      <figure><a href="/capturas/calc/orcamento.webp" aria-label="Abrir la imagen en grande: Presupuesto"><img src="/capturas/calc/orcamento.webp" alt="Presupuesto. El precio y lo que cuesta de verdad: acero, pintura, soldadura y discos." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Presupuesto</strong> El precio y lo que cuesta de verdad: acero, pintura, soldadura y discos.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-cifras">
+    <h2 id="t-cifras">En números</h2>
+    <dl class="cifras cifras-seis">
+      <div><dt>Partes</dt><dd>7</dd></div>
+      <div><dt>Tablas propias</dt><dd>3</dd></div>
+      <div><dt>Funciones</dt><dd>276</dd></div>
+      <div><dt>Commits</dt><dd>265</dd></div>
+      <div><dt>Líneas de código</dt><dd>10 mil</dd></div>
+      <div><dt>Acero (kg/m³)</dt><dd>7.850</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="arquitectura" aria-labelledby="t-arq">
+    <h2 id="t-arq">Cómo está armado</h2>
+    <p>Casi todo pasa en el navegador: al cambiar una medida, el resultado aparece sin esperar. El servidor solo guarda los proyectos, las fotos y pasa el presupuesto a FinanceIA.</p>
+    <div class="capas" role="img" aria-label="Diagrama: el navegador hace el cálculo, la planta y el 3D; el servidor PHP guarda en MySQL y pasa el presupuesto a FinanceIA.">
+      <div class="capa"><h3>Pantallas</h3><p class="tec">JavaScript, SVG, WebGL</p><p>Motor de cálculo, lector de PDF, planta y 3D, todo en un solo archivo.</p></div>
+      <div class="enlace"><span>pedidos y respuestas en JSON</span></div>
+      <div>
+        <div class="capa"><h3>Servidor</h3><p class="tec">PHP 8, 6 archivos</p><p>Revisa la sesión y que el proyecto sea del usuario, guarda proyectos y fotos.</p></div>
+        <div class="externos">
+          <div class="capa"><h3>FinanceIA</h3><p>Recibe el presupuesto como borrador, con sus ítems y materiales.</p></div>
+        </div>
+      </div>
+      <div class="enlace"><span>consultas SQL</span></div>
+      <div class="capa"><h3>Base de datos</h3><p class="tec">MariaDB (MySQL)</p><p>La misma base de FinanceIA: los usuarios entran con la misma cuenta.</p></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-modulos">
+    <h2 id="t-modulos">Las 7 partes</h2>
+    <p>Cada obra es un proyecto, y dentro de él está todo lo que hace falta para fabricarla.</p>
+    <div class="modulos">
+      <div class="modulo centro"><strong>Montador</strong><span>La planta de la obra: pilares, vigas treliza, largueros, escaleras, barandas y piso, con sus medidas y en 3D.</span></div>
+      <div class="modulo"><strong>Proyectos</strong><span>Cada obra con su etapa (presupuesto, compra, corte, soldadura, pintura, montaje), ficha, fotos y videos.</span></div>
+      <div class="modulo"><strong>Catálogo de perfiles</strong><span>Tubos, perfiles U y chapas, con su peso por metro.</span></div>
+      <div class="modulo"><strong>Lector de PDF</strong><span>Lee la lista de piezas del proyecto del ingeniero.</span></div>
+      <div class="modulo"><strong>Motor de corte</strong><span>Decide cómo cortar cada barra de 6 metros para perder lo menos posible.</span></div>
+      <div class="modulo"><strong>Hoja de corte</strong><span>La lista de barras a comprar y cómo cortar cada una, en PDF para el taller.</span></div>
+      <div class="modulo"><strong>Presupuesto</strong><span>Precio por kilo, por metro cuadrado o detallado, y se pasa a FinanceIA.</span></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-viaje">
+    <h2 id="t-viaje">El viaje de un dato</h2>
+    <p>Qué pasa, paso a paso, desde la planta hasta el presupuesto.</p>
+    <div class="viaje" id="viaje">
+      <span class="pulso" aria-hidden="true"></span>
+      <ol>
+        <li><span class="num">1</span><div><h3>Se arma la obra</h3><p>En el montador se ponen pilares, vigas, escaleras y barandas sobre la planta.</p></div></li>
+        <li><span class="num">2</span><div><h3>Salen las piezas</h3><p>Cada elemento se convierte en piezas con su perfil, su medida y su cantidad.</p></div></li>
+        <li><span class="num">3</span><div><h3>Una sola fórmula</h3><p>El peso de cada pieza es su volumen por la densidad del acero, 7.850 kg/m³.</p></div></li>
+        <li><span class="num">4</span><div><h3>El motor de corte</h3><p>Las piezas se ordenan de mayor a menor y cada una entra en la primera barra donde cabe (First Fit Decreasing). Descuenta el grosor del disco y, si una pieza es más larga que la barra, la empalma.</p></div></li>
+        <li><span class="num">5</span><div><h3>Hoja para el taller</h3><p>Las barras que se cortan igual se agrupan: 8 barras así, 6 barras asá.</p></div></li>
+        <li><span class="num">6</span><div><h3>El precio</h3><p>Acero, pintura, soldadura, gas y discos de corte, y el precio final.</p></div></li>
+        <li><span class="num">7</span><div><h3>A FinanceIA</h3><p>En una sola operación de la base, con número de presupuesto bloqueado para que no se repita, se crea el presupuesto en borrador.</p></div></li>
+        <li><span class="num">8</span><div><h3>Lo firma una persona</h3><p>El presupuesto queda en borrador hasta que Pablo lo revisa y lo manda al cliente.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="seguridad" aria-labelledby="t-seg">
+    <h2 id="t-seg">Seguridad</h2>
+    <p>Es una herramienta interna, pero guarda los proyectos y las fotos de los clientes.</p>
+    <table class="tabla">
+      <tbody>
+        <tr><th scope="row">Contraseñas</th><td>Con hash, nunca en texto. La misma cuenta de FinanceIA.</td></tr>
+        <tr><th scope="row">Intentos de entrada</th><td>Límite por IP.</td></tr>
+        <tr><th scope="row">Datos de cada usuario</th><td>Toda consulta filtra por el usuario: nadie ve proyectos ajenos.</td></tr>
+        <tr><th scope="row">Consultas a la base</th><td>Preparadas, para que nadie pueda meter código malicioso.</td></tr>
+        <tr><th scope="row">Fotos y videos</th><td>Fuera de la carpeta pública, por usuario y proyecto.</td></tr>
+        <tr><th scope="row">Claves</th><td>Solo en el servidor, fuera de Git.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-calidad">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-calidad">Calidad y entrega</h2>
+        <ul>
+          <li>Se usa en obras reales del taller desde agosto de 2026.</li>
+          <li>Cada fórmula está explicada para personas en un documento aparte, con sus normas.</li>
+          <li>El diseño sigue la misma guía de interfaz que FinanceIA: los dos se ven iguales.</li>
+          <li>Copia de la versión anterior antes de cada subida al servidor.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Lo que haría después</h2>
+        <ul>
+          <li>Separar el archivo grande en módulos con React y TypeScript, como en Global-VZLA App.</li>
+          <li>Pruebas automáticas del motor de corte, para que nunca se rompa sin avisar.</li>
+          <li>Probar un algoritmo de corte exacto para obras grandes.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-papel">
+    <div class="papel">
+      <h2 id="t-papel">Mi papel</h2>
+      <p>Desarrollé esta herramienta con agentes de IA (Claude Code) para Pablo's Serralheria. Yo puse las reglas del taller (el grosor del disco, los empalmes, cómo se corta una treliza), aprobé cada pantalla, la probé en obras reales y la puse en producción. La IA escribió gran parte del código bajo esas reglas.</p>
+      <p>Aquí se junta mi formación de ingeniero con el desarrollo: la parte de cálculo la entiendo y la reviso yo.</p>
+    </div>
+    <div class="siguiente">
+      <a class="boton principal" href="/#contacto">Hablemos</a>
+      <a class="boton" href="/#proyectos">Ver otros proyectos</a>
+    </div>
+  </section>
+</main>
+
+<footer class="contenedor pie">
+  <p>El código es privado. Las capturas usan un proyecto inventado: cliente y medidas son ficticios.</p>
+</footer>
+<script>
+  document.querySelectorAll('.idiomas a').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('idioma', a.dataset.idioma); } catch (e) {} });
+  });
+</script>
+<script>
+  (function () {
+    var viaje = document.getElementById('viaje');
+    if (!viaje || !('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { viaje.classList.add('activo'); obs.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    obs.observe(viaje);
+  })();
+</script>
+</body>
+</html>
