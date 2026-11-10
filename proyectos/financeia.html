@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FinanceIA</title>
+  <meta name="description" content="Caso de estudio: sistema financiero con IA para una empresa de estructuras metálicas, con React, PHP 8, MySQL y la API de Claude. Por Pablo Navarreto.">
+  <link rel="canonical" href="https://pablo-navarreto.github.io/proyectos/financeia.html">
+  <link rel="alternate" hreflang="es" href="https://pablo-navarreto.github.io/proyectos/financeia.html">
+  <link rel="alternate" hreflang="pt" href="https://pablo-navarreto.github.io/pt/projetos/financeia.html">
+  <link rel="alternate" hreflang="en" href="https://pablo-navarreto.github.io/en/projects/financeia.html">
+  <link rel="alternate" hreflang="x-default" href="https://pablo-navarreto.github.io/proyectos/financeia.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FinanceIA">
+  <meta property="og:description" content="Caso de estudio: sistema financiero con IA para una empresa de estructuras metálicas, con React, PHP 8, MySQL y la API de Claude. Por Pablo Navarreto.">
+  <meta property="og:url" content="https://pablo-navarreto.github.io/proyectos/financeia.html">
+  <meta property="og:image" content="https://pablo-navarreto.github.io/compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+
+<header class="contenedor barra">
+  <a class="marca" href="/">Pablo Navarreto</a>
+  <nav aria-label="Proyectos">
+    <a href="#problema">Problema</a>
+    <a href="#arquitectura">Arquitectura</a>
+    <a href="#seguridad">Seguridad</a>
+    <a href="/#contacto">Contacto</a>
+  </nav>
+  <div class="idiomas" role="group" aria-label="Idioma"><a href="/proyectos/financeia.html" hreflang="es" lang="es" data-idioma="es" aria-current="true">ES</a><a href="/pt/projetos/financeia.html" hreflang="pt" lang="pt" data-idioma="pt">PT</a><a href="/en/projects/financeia.html" hreflang="en" lang="en" data-idioma="en">EN</a></div>
+</header>
+
+<main>
+  <section class="contenedor caso-portada">
+    <a class="volver" href="/#proyectos">Volver a proyectos</a>
+    <h1>FinanceIA</h1>
+    <p class="intro">El sistema financiero de Pablo's Serralheria, un taller de estructuras metálicas en Brasil. Se sube el extracto del banco, la IA lo lee y lo clasifica, y el sistema lo cruza con las facturas y los gastos para saber que todo cuadra.</p>
+    <dl class="ficha">
+      <div><dt>Mi papel</dt><dd>Diseño, dirección y puesta en producción</dd></div>
+      <div><dt>Año</dt><dd>2026</dd></div>
+      <div><dt>Estado</dt><dd>En producción desde mayo de 2026</dd></div>
+      <div><dt>Tecnología</dt><dd>React, PHP 8, MySQL, Claude</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="problema" aria-labelledby="t-problema">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-problema">El problema</h2>
+        <p>Las finanzas del taller se hacían a mano, en planillas, y tomaban horas cada mes.</p>
+        <ul>
+          <li>Cada línea del extracto del banco se copiaba a mano a una planilla.</li>
+          <li>Había que separar a ojo qué era venta, qué era gasto y qué era solo dinero pasando entre cuentas propias.</li>
+          <li>Los presupuestos y recibos se hacían uno por uno, sin conexión con lo que después se cobraba.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>La solución</h2>
+        <p>Subir el extracto y que el sistema haga el trabajo pesado, con una persona revisando antes de guardar.</p>
+        <ul>
+          <li>La IA lee el extracto en PDF y clasifica cada movimiento. En Excel, los montos se leen exactos y la IA solo pone la categoría.</li>
+          <li>Cada movimiento del banco se cruza con su factura o su gasto, y el sistema sugiere los pares.</li>
+          <li>Presupuestos y recibos en PDF que pasan a factura o a gasto con un clic.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="pantallas" aria-labelledby="t-pantallas">
+    <h2 id="t-pantallas">El sistema funcionando</h2>
+    <p>Capturas de una copia del sistema con datos de demostración. Los clientes, proveedores y montos son inventados. El sistema y sus cálculos son los reales. Las pantallas están en portugués, el idioma de la empresa.</p>
+    <div class="capturas">
+      <figure><a href="/capturas/financeia/dashboard.webp" aria-label="Abrir la imagen en grande: Dashboard"><img src="/capturas/financeia/dashboard.webp" alt="Dashboard. El saldo de cada cuenta y los números del mes en una sola pantalla." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Dashboard</strong> El saldo de cada cuenta y los números del mes en una sola pantalla.</figcaption></figure>
+      <figure><a href="/capturas/financeia/extratos.webp" aria-label="Abrir la imagen en grande: Conciliación del extracto"><img src="/capturas/financeia/extratos.webp" alt="Conciliación del extracto. Lo que bate con lo registrado, y lo que está solo en el banco para incorporarlo." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Conciliación del extracto</strong> Lo que bate con lo registrado, y lo que está solo en el banco para incorporarlo.</figcaption></figure>
+      <figure><a href="/capturas/financeia/faturamento.webp" aria-label="Abrir la imagen en grande: Faturamento"><img src="/capturas/financeia/faturamento.webp" alt="Faturamento. Facturas formales e informales, cobros parciales y lo que falta recibir." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Faturamento</strong> Facturas formales e informales, cobros parciales y lo que falta recibir.</figcaption></figure>
+      <figure><a href="/capturas/financeia/orcamentos.webp" aria-label="Abrir la imagen en grande: Orçamentos"><img src="/capturas/financeia/orcamentos.webp" alt="Orçamentos. Cada presupuesto con su estado y sus acciones." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Orçamentos</strong> Cada presupuesto con su estado y sus acciones.</figcaption></figure>
+      <figure><a href="/capturas/financeia/orcamento-pdf.webp" aria-label="Abrir la imagen en grande: Presupuesto en PDF"><img src="/capturas/financeia/orcamento-pdf.webp" alt="Presupuesto en PDF. El documento que recibe el cliente, armado por el sistema." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Presupuesto en PDF</strong> El documento que recibe el cliente, armado por el sistema.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-cifras">
+    <h2 id="t-cifras">En números</h2>
+    <dl class="cifras cifras-seis">
+      <div><dt>Pantallas</dt><dd>7</dd></div>
+      <div><dt>Tablas en la base</dt><dd>18</dd></div>
+      <div><dt>Pruebas automáticas</dt><dd>102</dd></div>
+      <div><dt>Commits</dt><dd>236</dd></div>
+      <div><dt>Líneas de código</dt><dd>12 mil</dd></div>
+      <div><dt>Bancos y efectivo</dt><dd>3</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="arquitectura" aria-labelledby="t-arq">
+    <h2 id="t-arq">Cómo está armado</h2>
+    <p>Tres capas separadas. La pantalla nunca habla con la IA: el servidor manda el documento a Claude y es el único que guarda la clave.</p>
+    <div class="capas" role="img" aria-label="Diagrama: el navegador con React habla con el servidor PHP, que habla con la base de datos MariaDB y con la API de Claude.">
+      <div class="capa"><h3>Pantallas</h3><p class="tec">React + Vite (PWA)</p><p>Lo que ve el usuario. Se instala como app en el celular (PWA).</p></div>
+      <div class="enlace"><span>pedidos y respuestas en JSON</span></div>
+      <div>
+        <div class="capa"><h3>Servidor</h3><p class="tec">PHP 8.2, un archivo por acción</p><p>Revisa sesión y permisos, aplica las reglas del negocio, arma los PDF y habla con la IA.</p></div>
+        <div class="externos">
+          <div class="capa"><h3>API de Claude</h3><p>Lee extractos y notas fiscales y devuelve cada movimiento en JSON.</p></div>
+        </div>
+      </div>
+      <div class="enlace"><span>consultas SQL</span></div>
+      <div class="capa"><h3>Base de datos</h3><p class="tec">MariaDB (MySQL)</p><p>18 tablas: cuentas, movimientos, facturas, gastos, pagos, presupuestos y auditoría.</p></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-modulos">
+    <h2 id="t-modulos">Las 7 pantallas</h2>
+    <p>Cada pantalla tiene su parte del servidor. El panel junta los números de todas.</p>
+    <div class="modulos">
+      <div class="modulo centro"><strong>Dashboard</strong><span>Saldo de cada cuenta, lo que falta entrar y salir, y los números del mes comparados con el anterior.</span></div>
+      <div class="modulo"><strong>Extratos</strong><span>Subir el extracto del banco, revisar lo que leyó la IA, confirmar y conciliar.</span></div>
+      <div class="modulo"><strong>Faturamento</strong><span>Facturas formales e informales, cobros parciales y lo que falta recibir.</span></div>
+      <div class="modulo"><strong>Despesas</strong><span>Gastos por categoría, con vencimiento y pagos en varias cuentas.</span></div>
+      <div class="modulo"><strong>Orçamentos</strong><span>Presupuestos con ítems y materiales, en PDF. Aprobado, pasa a factura con un clic.</span></div>
+      <div class="modulo"><strong>Recibos</strong><span>Recibos en PDF que pasan a gasto con un clic.</span></div>
+      <div class="modulo"><strong>Configurações</strong><span>Cuentas, usuarios con permiso de solo leer, cierre del mes y auditoría.</span></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-viaje">
+    <h2 id="t-viaje">El viaje de un dato</h2>
+    <p>Qué pasa, paso a paso, cuando se sube el extracto del banco.</p>
+    <div class="viaje" id="viaje">
+      <span class="pulso" aria-hidden="true"></span>
+      <ol>
+        <li><span class="num">1</span><div><h3>Se elige el archivo</h3><p>En la pantalla Extratos se sube el PDF o el Excel del banco.</p></div></li>
+        <li><span class="num">2</span><div><h3>Controles de entrada</h3><p>Se bloquean pedidos de otros sitios y solo un administrador puede subir.</p></div></li>
+        <li><span class="num">3</span><div><h3>Se revisa el archivo</h3><p>Máximo 10 MB y se mira el tipo real del archivo por su contenido, no por el nombre.</p></div></li>
+        <li><span class="num">4</span><div><h3>Dos caminos</h3><p>Excel: los montos se leen exactos, sin IA, y la IA solo clasifica. PDF: la IA de Claude lee el documento y devuelve los movimientos en JSON.</p></div></li>
+        <li><span class="num">5</span><div><h3>Regla de la casa</h3><p>Todo movimiento con el CNPJ o el nombre de la propia empresa es una transferencia interna: no es venta ni gasto.</p></div></li>
+        <li><span class="num">6</span><div><h3>Sin duplicados</h3><p>Si ya hay un extracto de ese banco y ese mes, se rechaza.</p></div></li>
+        <li><span class="num">7</span><div><h3>Revisión humana</h3><p>La pantalla muestra todo lo leído. Nada se guarda hasta que la persona confirma.</p></div></li>
+        <li><span class="num">8</span><div><h3>Conciliación</h3><p>Cada movimiento se cruza con su factura o gasto: mismo monto, misma dirección y menos días de diferencia gana.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="seguridad" aria-labelledby="t-seg">
+    <h2 id="t-seg">Seguridad</h2>
+    <p>Es el dinero de la empresa, así que cada pedido se revisa en el servidor.</p>
+    <table class="tabla">
+      <tbody>
+        <tr><th scope="row">Contraseñas</th><td>Guardadas con hash bcrypt, nunca en texto.</td></tr>
+        <tr><th scope="row">Recuperar contraseña</th><td>Enlace de un solo uso, guardado con hash y con vencimiento.</td></tr>
+        <tr><th scope="row">Clave de la IA</th><td>Solo en el servidor, fuera de Git. El navegador nunca la ve.</td></tr>
+        <tr><th scope="row">Intentos de entrada</th><td>Máximo 5 intentos cada 15 minutos por IP.</td></tr>
+        <tr><th scope="row">Pedidos falsos de otros sitios</th><td>Bloqueados antes de llegar a la lógica (protección CSRF).</td></tr>
+        <tr><th scope="row">Archivos subidos</th><td>Tamaño máximo y tipo real verificado.</td></tr>
+        <tr><th scope="row">Permisos</th><td>Administrador o solo lectura, revisado en cada pedido.</td></tr>
+        <tr><th scope="row">Registro</th><td>La auditoría anota quién hizo qué y cuándo.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-calidad">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-calidad">Calidad y entrega</h2>
+        <ul>
+          <li>102 pruebas automáticas: 84 en el servidor (PHPUnit) y 18 en las pantallas (Vitest).</li>
+          <li>Las pruebas corren solas en GitHub Actions cada vez que se sube un cambio, con una base MySQL temporal.</li>
+          <li>Reglas que no se pueden romper, escritas y probadas porque cada una vino de un error real (por ejemplo, convertir un presupuesto dos veces no crea dos facturas).</li>
+          <li>Mes cerrado: después del cierre nadie puede cambiar los números de ese mes.</li>
+          <li>Copia de la base antes de cada subida al servidor.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Lo que haría después</h2>
+        <ul>
+          <li>Pasar las pantallas a TypeScript, como en mi proyecto siguiente.</li>
+          <li>Que GitHub Actions también suba el sistema al servidor, no solo lo pruebe.</li>
+          <li>Más pruebas en las pantallas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-papel">
+    <div class="papel">
+      <h2 id="t-papel">Mi papel</h2>
+      <p>Desarrollé este sistema con agentes de IA (Claude Code) para Pablo's Serralheria. Yo definí el problema y las reglas del dinero, aprobé cada diseño, probé cada fase con los extractos reales y lo puse en producción. La IA escribió gran parte del código bajo esas reglas.</p>
+      <p>Fue mi primer sistema grande. Lo que aprendí aquí lo usé después en Global-VZLA App.</p>
+    </div>
+    <div class="siguiente">
+      <a class="boton principal" href="/#contacto">Hablemos</a>
+      <a class="boton" href="/#proyectos">Ver otros proyectos</a>
+    </div>
+  </section>
+</main>
+
+<footer class="contenedor pie">
+  <p>El código es privado. Las capturas usan datos de demostración: clientes, proveedores y montos son inventados.</p>
+</footer>
+<script>
+  document.querySelectorAll('.idiomas a').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('idioma', a.dataset.idioma); } catch (e) {} });
+  });
+</script>
+<script>
+  (function () {
+    var viaje = document.getElementById('viaje');
+    if (!viaje || !('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { viaje.classList.add('activo'); obs.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    obs.observe(viaje);
+  })();
+</script>
+</body>
+</html>

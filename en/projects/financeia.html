@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FinanceIA</title>
+  <meta name="description" content="Case study: an AI-powered finance system for a metalwork shop, built with React, PHP 8, MySQL and the Claude API. By Pablo Navarreto.">
+  <link rel="canonical" href="https://pablo-navarreto.github.io/en/projects/financeia.html">
+  <link rel="alternate" hreflang="es" href="https://pablo-navarreto.github.io/proyectos/financeia.html">
+  <link rel="alternate" hreflang="pt" href="https://pablo-navarreto.github.io/pt/projetos/financeia.html">
+  <link rel="alternate" hreflang="en" href="https://pablo-navarreto.github.io/en/projects/financeia.html">
+  <link rel="alternate" hreflang="x-default" href="https://pablo-navarreto.github.io/proyectos/financeia.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FinanceIA">
+  <meta property="og:description" content="Case study: an AI-powered finance system for a metalwork shop, built with React, PHP 8, MySQL and the Claude API. By Pablo Navarreto.">
+  <meta property="og:url" content="https://pablo-navarreto.github.io/en/projects/financeia.html">
+  <meta property="og:image" content="https://pablo-navarreto.github.io/compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+
+<header class="contenedor barra">
+  <a class="marca" href="/en/">Pablo Navarreto</a>
+  <nav aria-label="Projects">
+    <a href="#problema">Problem</a>
+    <a href="#arquitectura">Architecture</a>
+    <a href="#seguridad">Security</a>
+    <a href="/en/#contacto">Contact</a>
+  </nav>
+  <div class="idiomas" role="group" aria-label="Language"><a href="/proyectos/financeia.html" hreflang="es" lang="es" data-idioma="es">ES</a><a href="/pt/projetos/financeia.html" hreflang="pt" lang="pt" data-idioma="pt">PT</a><a href="/en/projects/financeia.html" hreflang="en" lang="en" data-idioma="en" aria-current="true">EN</a></div>
+</header>
+
+<main>
+  <section class="contenedor caso-portada">
+    <a class="volver" href="/en/#proyectos">Back to projects</a>
+    <h1>FinanceIA</h1>
+    <p class="intro">The finance system of Pablo's Serralheria, a metal structures shop in Brazil. You upload the bank statement, the AI reads and classifies it, and the system matches it against invoices and expenses so everything adds up.</p>
+    <dl class="ficha">
+      <div><dt>My role</dt><dd>Design, direction and deployment</dd></div>
+      <div><dt>Year</dt><dd>2026</dd></div>
+      <div><dt>Status</dt><dd>In production since May 2026</dd></div>
+      <div><dt>Stack</dt><dd>React, PHP 8, MySQL, Claude</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="problema" aria-labelledby="t-problema">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-problema">The problem</h2>
+        <p>The shop's finances were done by hand, in spreadsheets, and took hours every month.</p>
+        <ul>
+          <li>Every line of the bank statement was copied by hand into a spreadsheet.</li>
+          <li>Someone had to tell by eye what was a sale, what was an expense and what was just money moving between the company's own accounts.</li>
+          <li>Quotes and receipts were made one by one, with no link to what was later billed.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>The solution</h2>
+        <p>Upload the statement and let the system do the heavy lifting, with a person reviewing before anything is saved.</p>
+        <ul>
+          <li>The AI reads the PDF statement and classifies every transaction. With Excel, amounts are read exactly and the AI only assigns the category.</li>
+          <li>Every bank transaction is matched to its invoice or expense, and the system suggests the pairs.</li>
+          <li>PDF quotes and receipts that become an invoice or an expense in one click.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="pantallas" aria-labelledby="t-pantallas">
+    <h2 id="t-pantallas">The system at work</h2>
+    <p>Screenshots of a copy of the system with demo data. Clients, suppliers and amounts are made up. The system and its calculations are the real ones. The screens are in Portuguese, the company's language.</p>
+    <div class="capturas">
+      <figure><a href="/capturas/financeia/dashboard.webp" aria-label="Open the full-size image: Dashboard"><img src="/capturas/financeia/dashboard.webp" alt="Dashboard. Each account's balance and the month's numbers on one screen." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Dashboard</strong> Each account's balance and the month's numbers on one screen.</figcaption></figure>
+      <figure><a href="/capturas/financeia/extratos.webp" aria-label="Open the full-size image: Statement reconciliation"><img src="/capturas/financeia/extratos.webp" alt="Statement reconciliation. What matches the records, and what is only in the bank, ready to add." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Statement reconciliation</strong> What matches the records, and what is only in the bank, ready to add.</figcaption></figure>
+      <figure><a href="/capturas/financeia/faturamento.webp" aria-label="Open the full-size image: Invoicing"><img src="/capturas/financeia/faturamento.webp" alt="Invoicing. Formal and informal invoices, partial payments and what is still to be received." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Invoicing</strong> Formal and informal invoices, partial payments and what is still to be received.</figcaption></figure>
+      <figure><a href="/capturas/financeia/orcamentos.webp" aria-label="Open the full-size image: Quotes"><img src="/capturas/financeia/orcamentos.webp" alt="Quotes. Every quote with its status and actions." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Quotes</strong> Every quote with its status and actions.</figcaption></figure>
+      <figure><a href="/capturas/financeia/orcamento-pdf.webp" aria-label="Open the full-size image: Quote as PDF"><img src="/capturas/financeia/orcamento-pdf.webp" alt="Quote as PDF. The document the client receives, built by the system." width="1920" height="1200" loading="lazy"></a><figcaption><strong>Quote as PDF</strong> The document the client receives, built by the system.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-cifras">
+    <h2 id="t-cifras">By the numbers</h2>
+    <dl class="cifras cifras-seis">
+      <div><dt>Screens</dt><dd>7</dd></div>
+      <div><dt>Database tables</dt><dd>18</dd></div>
+      <div><dt>Automated tests</dt><dd>102</dd></div>
+      <div><dt>Commits</dt><dd>236</dd></div>
+      <div><dt>Lines of code</dt><dd>12k</dd></div>
+      <div><dt>Banks and cash</dt><dd>3</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="arquitectura" aria-labelledby="t-arq">
+    <h2 id="t-arq">How it's built</h2>
+    <p>Three separate layers. The screen never talks to the AI: the server sends the document to Claude and is the only one holding the key.</p>
+    <div class="capas" role="img" aria-label="Diagram: the React browser app talks to the PHP server, which talks to the MariaDB database and the Claude API.">
+      <div class="capa"><h3>Screens</h3><p class="tec">React + Vite (PWA)</p><p>What the user sees. Installs as an app on the phone (PWA).</p></div>
+      <div class="enlace"><span>JSON requests and responses</span></div>
+      <div>
+        <div class="capa"><h3>Server</h3><p class="tec">PHP 8.2, one file per action</p><p>Checks session and permissions, applies the business rules, builds the PDFs and talks to the AI.</p></div>
+        <div class="externos">
+          <div class="capa"><h3>Claude API</h3><p>Reads statements and tax invoices and returns every transaction as JSON.</p></div>
+        </div>
+      </div>
+      <div class="enlace"><span>SQL queries</span></div>
+      <div class="capa"><h3>Database</h3><p class="tec">MariaDB (MySQL)</p><p>18 tables: accounts, transactions, invoices, expenses, payments, quotes and audit log.</p></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-modulos">
+    <h2 id="t-modulos">The 7 screens</h2>
+    <p>Each screen has its own part on the server. The dashboard brings all the numbers together.</p>
+    <div class="modulos">
+      <div class="modulo centro"><strong>Dashboard</strong><span>Balance of each account, money still to come in and go out, and the month compared with the previous one.</span></div>
+      <div class="modulo"><strong>Extratos</strong><span>Upload the bank statement, review what the AI read, confirm and reconcile.</span></div>
+      <div class="modulo"><strong>Faturamento</strong><span>Formal and informal invoices, partial payments and what is still to be received.</span></div>
+      <div class="modulo"><strong>Despesas</strong><span>Expenses by category, with due dates and payments across several accounts.</span></div>
+      <div class="modulo"><strong>Orçamentos</strong><span>Quotes with items and materials, as PDF. Once approved, it becomes an invoice in one click.</span></div>
+      <div class="modulo"><strong>Recibos</strong><span>PDF receipts that become an expense in one click.</span></div>
+      <div class="modulo"><strong>Configurações</strong><span>Accounts, read-only users, month closing and audit log.</span></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-viaje">
+    <h2 id="t-viaje">The journey of a piece of data</h2>
+    <p>What happens, step by step, when a bank statement is uploaded.</p>
+    <div class="viaje" id="viaje">
+      <span class="pulso" aria-hidden="true"></span>
+      <ol>
+        <li><span class="num">1</span><div><h3>The file is chosen</h3><p>On the Extratos screen the user uploads the bank's PDF or Excel file.</p></div></li>
+        <li><span class="num">2</span><div><h3>Entry checks</h3><p>Requests from other sites are blocked and only an administrator can upload.</p></div></li>
+        <li><span class="num">3</span><div><h3>The file is checked</h3><p>10 MB at most, and the real file type is read from its content, not its name.</p></div></li>
+        <li><span class="num">4</span><div><h3>Two paths</h3><p>Excel: amounts are read exactly, without AI, and the AI only classifies. PDF: Claude reads the document and returns the transactions as JSON.</p></div></li>
+        <li><span class="num">5</span><div><h3>House rule</h3><p>Any transaction with the company's own tax ID or name is an internal transfer: neither a sale nor an expense.</p></div></li>
+        <li><span class="num">6</span><div><h3>No duplicates</h3><p>If there is already a statement for that bank and month, it is rejected.</p></div></li>
+        <li><span class="num">7</span><div><h3>Human review</h3><p>The screen shows everything that was read. Nothing is saved until the person confirms.</p></div></li>
+        <li><span class="num">8</span><div><h3>Reconciliation</h3><p>Each transaction is matched to its invoice or expense: same amount, same direction, and the fewest days apart wins.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="seguridad" aria-labelledby="t-seg">
+    <h2 id="t-seg">Security</h2>
+    <p>It is the company's money, so every request is checked on the server.</p>
+    <table class="tabla">
+      <tbody>
+        <tr><th scope="row">Passwords</th><td>Stored as bcrypt hashes, never as plain text.</td></tr>
+        <tr><th scope="row">Password reset</th><td>Single-use link, stored hashed and with an expiry.</td></tr>
+        <tr><th scope="row">AI key</th><td>Only on the server, outside Git. The browser never sees it.</td></tr>
+        <tr><th scope="row">Login attempts</th><td>At most 5 attempts every 15 minutes per IP.</td></tr>
+        <tr><th scope="row">Forged requests from other sites</th><td>Blocked before reaching the logic (CSRF protection).</td></tr>
+        <tr><th scope="row">Uploaded files</th><td>Size limit and real file type checked.</td></tr>
+        <tr><th scope="row">Permissions</th><td>Administrator or read-only, checked on every request.</td></tr>
+        <tr><th scope="row">Audit log</th><td>Records who did what and when.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-calidad">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-calidad">Quality and delivery</h2>
+        <ul>
+          <li>102 automated tests: 84 on the server (PHPUnit) and 18 on the screens (Vitest).</li>
+          <li>Tests run on their own in GitHub Actions on every push, with a temporary MySQL database.</li>
+          <li>Rules that must never break, written down and tested because each came from a real bug (for example, converting a quote twice does not create two invoices).</li>
+          <li>Closed month: after closing, nobody can change that month's numbers.</li>
+          <li>Database backup before every deploy.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>What I'd do next</h2>
+        <ul>
+          <li>Move the screens to TypeScript, as in my next project.</li>
+          <li>Have GitHub Actions deploy the system too, not just test it.</li>
+          <li>More tests on the screens.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-papel">
+    <div class="papel">
+      <h2 id="t-papel">My role</h2>
+      <p>I built this system with AI agents (Claude Code) for Pablo's Serralheria. I defined the problem and the money rules, approved every design, tested each phase with the real statements and put it into production. The AI wrote much of the code under those rules.</p>
+      <p>It was my first large system. What I learned here I later used in Global-VZLA App.</p>
+    </div>
+    <div class="siguiente">
+      <a class="boton principal" href="/en/#contacto">Let's talk</a>
+      <a class="boton" href="/en/#proyectos">See other projects</a>
+    </div>
+  </section>
+</main>
+
+<footer class="contenedor pie">
+  <p>The code is private. The screenshots use demo data: clients, suppliers and amounts are made up.</p>
+</footer>
+<script>
+  document.querySelectorAll('.idiomas a').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('idioma', a.dataset.idioma); } catch (e) {} });
+  });
+</script>
+<script>
+  (function () {
+    var viaje = document.getElementById('viaje');
+    if (!viaje || !('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { viaje.classList.add('activo'); obs.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    obs.observe(viaje);
+  })();
+</script>
+</body>
+</html>
