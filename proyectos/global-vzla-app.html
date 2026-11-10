@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global-VZLA App</title>
+  <meta name="description" content="Caso de estudio: plataforma modular para un negocio de afiliados, con React, PHP 8, MySQL, Google Ads e IA. Por Pablo Navarreto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+
+<header class="contenedor barra">
+  <a class="marca" href="../">Pablo Navarreto</a>
+  <nav aria-label="Secciones del caso">
+    <a href="#problema">Problema</a>
+    <a href="#arquitectura">Arquitectura</a>
+    <a href="#seguridad">Seguridad</a>
+    <a href="../#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <section class="contenedor caso-portada">
+    <a class="volver" href="../">Volver a proyectos</a>
+    <h1>Global-VZLA App</h1>
+    <p class="intro">Una sola plataforma para manejar un negocio de marketing de afiliados de punta a punta: productos, páginas de venta, campañas de Google Ads, rastreo de ventas y un análisis de resultados con IA.</p>
+    <dl class="ficha">
+      <div><dt>Mi papel</dt><dd>Diseño, dirección y puesta en producción</dd></div>
+      <div><dt>Año</dt><dd>2026</dd></div>
+      <div><dt>Estado</dt><dd>En producción</dd></div>
+      <div><dt>Tecnología</dt><dd>React, TypeScript, PHP 8, MySQL</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="problema" aria-labelledby="t-problema">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-problema">El problema</h2>
+        <p>El negocio funcionaba con siete herramientas sueltas, hechas en distintos momentos, que no se pasaban datos entre ellas.</p>
+        <ul>
+          <li>El mismo producto se escribía cuatro veces, una en cada herramienta.</li>
+          <li>Los resultados de Google se cargaban a mano y se dejaron de cargar, así que el análisis quedó sin datos.</li>
+          <li>Se podían crear campañas, pero no manejarlas después.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>La solución</h2>
+        <p>Una sola aplicación donde el producto es el centro y todo lo demás cuelga de él. Se carga una vez y lo usan todos los módulos.</p>
+        <ul>
+          <li>Los datos de Google entran solos todos los días a las 6 de la mañana.</li>
+          <li>Las campañas se crean y se manejan desde la misma pantalla.</li>
+          <li>La IA lee los resultados y arma un reporte con lo que hay que decidir hoy.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-cifras">
+    <h2 id="t-cifras">En números</h2>
+    <dl class="cifras cifras-seis">
+      <div><dt>Módulos</dt><dd>10</dd></div>
+      <div><dt>Tablas en la base</dt><dd>66</dd></div>
+      <div><dt>Archivos de pruebas</dt><dd>227</dd></div>
+      <div><dt>Commits</dt><dd>547</dd></div>
+      <div><dt>Líneas de código</dt><dd>100 mil</dd></div>
+      <div><dt>Idiomas</dt><dd>3</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="arquitectura" aria-labelledby="t-arq">
+    <h2 id="t-arq">Cómo está armado</h2>
+    <p>Tres capas separadas. Las pantallas nunca hablan directo con Google ni con la IA: todo pasa por el servidor, que es el único que guarda las claves.</p>
+
+    <div class="capas" role="img" aria-label="Diagrama: el navegador con React habla con el servidor PHP, que habla con la base de datos MariaDB y con las APIs de Google Ads y de Claude.">
+      <div class="capa">
+        <h3>Pantallas</h3>
+        <p class="tec">React + TypeScript</p>
+        <p>Lo que ve el usuario en el navegador. Un solo cliente habla con el servidor.</p>
+      </div>
+      <div class="enlace"><span>pedidos y respuestas en JSON</span></div>
+      <div>
+        <div class="capa">
+          <h3>Servidor</h3>
+          <p class="tec">PHP 8, sin framework</p>
+          <p>Revisa sesión y permisos, aplica las reglas del negocio y habla con los servicios externos.</p>
+        </div>
+        <div class="externos">
+          <div class="capa"><h3>API de Google Ads</h3><p>Campañas y métricas, con inicio de sesión OAuth.</p></div>
+          <div class="capa"><h3>API de Claude</h3><p>Análisis con IA. Se registra el costo de cada uso.</p></div>
+        </div>
+      </div>
+      <div class="enlace"><span>consultas SQL</span></div>
+      <div class="capa">
+        <h3>Base de datos</h3>
+        <p class="tec">MariaDB (MySQL)</p>
+        <p>66 tablas. Cada fila sabe a qué cliente pertenece.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-modulos">
+    <h2 id="t-modulos">Los 10 módulos</h2>
+    <p>Un módulo nunca lee las tablas de otro: le pide los datos a través de su propia puerta. Así cada uno se puede cambiar sin romper los demás.</p>
+    <div class="modulos">
+      <div class="modulo centro"><strong>Productos</strong><span>La ficha de cada producto: red, link de afiliado, pago y países. El centro de todo.</span></div>
+      <div class="modulo"><strong>Campañas</strong><span>Crear y manejar campañas en Google Ads: presupuesto, puja, pausar.</span></div>
+      <div class="modulo"><strong>Tracker</strong><span>Registra visitas y ventas, y le avisa a Google qué anuncio trajo cada venta.</span></div>
+      <div class="modulo"><strong>Cerebro</strong><span>Analiza los resultados y arma un reporte con IA.</span></div>
+      <div class="modulo"><strong>Scout</strong><span>Ofertas encontradas por un robot en Python. Un botón las convierte en producto.</span></div>
+      <div class="modulo"><strong>Páginas</strong><span>Páginas de venta y del blog de cada producto, con sus visitas y ventas.</span></div>
+      <div class="modulo"><strong>Activos</strong><span>Cuentas y accesos del negocio.</span></div>
+      <div class="modulo"><strong>Conexiones</strong><span>Estado de la conexión con Google, la IA y la rutina diaria.</span></div>
+      <div class="modulo"><strong>Administración</strong><span>Usuarios, permisos, ambientes, auditoría y consumo.</span></div>
+      <div class="modulo"><strong>Inicio</strong><span>Los números principales y lo que hay que decidir hoy.</span></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-viaje">
+    <h2 id="t-viaje">El viaje de un dato</h2>
+    <p>Qué pasa, paso a paso, cuando alguien crea un producto nuevo y toca Guardar.</p>
+    <div class="viaje" id="viaje">
+      <span class="pulso" aria-hidden="true"></span>
+      <ol>
+      <li><span class="num">1</span><div><h3>La pantalla envía el formulario</h3><p>React manda los datos al servidor en formato JSON, junto con la sesión del usuario.</p></div></li>
+      <li><span class="num">2</span><div><h3>Una sola puerta de entrada</h3><p>Todos los pedidos entran por el mismo archivo del servidor, que los pasa a la lista de rutas.</p></div></li>
+      <li><span class="num">3</span><div><h3>Controles antes de hacer nada</h3><p>Se bloquean pedidos que vienen de otros sitios, se revisa que la sesión sea válida y que el usuario tenga permiso para editar productos.</p></div></li>
+      <li><span class="num">4</span><div><h3>Se validan los datos</h3><p>El módulo Productos revisa que todo esté bien antes de guardar.</p></div></li>
+      <li><span class="num">5</span><div><h3>Se guarda de forma segura</h3><p>El guardado usa consultas preparadas, para que nadie pueda meter código malicioso en la base.</p></div></li>
+      <li><span class="num">6</span><div><h3>Cada dato en su ambiente</h3><p>El producto queda marcado con el cliente al que pertenece, para que los datos nunca se mezclen.</p></div></li>
+      <li><span class="num">7</span><div><h3>Queda registrado</h3><p>La auditoría anota quién hizo qué y cuándo.</p></div></li>
+      <li><span class="num">8</span><div><h3>Respuesta a la pantalla</h3><p>El servidor devuelve el número del producto nuevo y la pantalla abre su ficha.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="seguridad" aria-labelledby="t-seg">
+    <h2 id="t-seg">Seguridad</h2>
+    <p>Es un sistema que maneja cuentas de Google y dinero de campañas, así que la seguridad se pensó desde el principio.</p>
+    <table class="tabla">
+      <tbody>
+        <tr><th scope="row">Contraseñas</th><td>Guardadas con hash bcrypt, nunca en texto.</td></tr>
+        <tr><th scope="row">Datos sensibles</th><td>Cifrados con AES-256-GCM.</td></tr>
+        <tr><th scope="row">Claves de Google y de la IA</th><td>Solo en el servidor, fuera de la carpeta pública y fuera de Git.</td></tr>
+        <tr><th scope="row">Intentos de entrada</th><td>Límite por IP y verificación anti-robots de Cloudflare.</td></tr>
+        <tr><th scope="row">Pedidos falsos de otros sitios</th><td>Bloqueados antes de llegar a la lógica (protección CSRF).</td></tr>
+        <tr><th scope="row">Permisos</th><td>Por módulo: sin acceso, solo ver o editar.</td></tr>
+        <tr><th scope="row">Separación de clientes</th><td>Cada tabla del negocio sabe a qué cliente pertenece cada fila.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-calidad">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-calidad">Calidad y entrega</h2>
+        <ul>
+          <li>227 archivos de pruebas automáticas: PHPUnit en el servidor y Vitest en las pantallas.</li>
+          <li>Las conexiones con Google se prueban con respuestas simuladas, sin tocar cuentas reales.</li>
+          <li>Cada parte tiene un diseño escrito y aprobado antes de construirse.</li>
+          <li>Cada error se documenta con su causa, su arreglo y cómo revisarlo.</li>
+          <li>Subida al servidor por SSH, comparando cada archivo con el del repositorio.</li>
+          <li>Datos de las herramientas viejas migrados con scripts que no duplican nada.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Lo que haría después</h2>
+        <ul>
+          <li>Subida automática con GitHub Actions, que pruebe y publique sola en cada cambio.</li>
+          <li>Un servidor propio cuando crezcan los usuarios; el hosting compartido tiene límites.</li>
+          <li>Alertas automáticas cuando algo falla, en vez de revisar el panel.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-papel">
+    <div class="papel">
+      <h2 id="t-papel">Mi papel</h2>
+      <p>Desarrollé este sistema con agentes de IA (Claude Code). Yo definí el problema, las reglas y el orden de trabajo, aprobé cada diseño, revisé y probé cada fase y lo puse en producción. La IA escribió gran parte del código bajo esas reglas.</p>
+      <p>Mi trabajo se parece al de un líder técnico: decidir qué se hace, en qué orden y cuándo está bien hecho.</p>
+    </div>
+    <div class="siguiente">
+      <a class="boton principal" href="../#contacto">Hablemos</a>
+      <a class="boton" href="../#proyectos">Ver otros proyectos</a>
+    </div>
+  </section>
+</main>
+
+<footer class="contenedor pie">
+  <p>El código es privado. Esta página describe el sistema sin mostrar datos reales del negocio.</p>
+</footer>
+
+<script>
+  // Un solo momento animado: el pulso recorre la línea cuando el viaje entra en pantalla.
+  (function () {
+    var viaje = document.getElementById('viaje');
+    if (!viaje || !('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { viaje.classList.add('activo'); obs.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    obs.observe(viaje);
+  })();
+</script>
+</body>
+</html>

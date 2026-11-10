@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pablo Navarreto</title>
+  <meta name="description" content="Pablo Navarreto, ingeniero en Telecomunicaciones que desarrolla sistemas web con IA. Portafolio de proyectos en producción.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="contenedor barra">
+  <a class="marca" href="./">Pablo Navarreto</a>
+  <nav aria-label="Secciones">
+    <a href="#proyectos">Proyectos</a>
+    <a href="#como-trabajo">Cómo trabajo</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <section class="contenedor portada">
+    <h1>Pablo Navarreto</h1>
+    <p class="intro">Soy ingeniero en Telecomunicaciones. Desde 2026 hago sistemas web con inteligencia artificial que ya funcionan en empresas reales: los diseño, dirijo a la IA, reviso cada parte y los pongo en producción.</p>
+    <div class="acciones">
+      <a class="boton principal" href="proyectos/global-vzla-app.html">Ver mi proyecto principal</a>
+      <a class="boton" href="cv/CV_Pablo_Navarreto_Rauseo_ES.pdf">Descargar CV</a>
+    </div>
+  </section>
+
+  <section class="contenedor camino" aria-labelledby="titulo-camino">
+    <h2 id="titulo-camino">Mi camino</h2>
+    <ol>
+      <li>
+        <div class="verbo">Conectar</div>
+        <p class="donde">PDVSA (Petropiar) y T-Protege, Anzoátegui, 2017 a 2018</p>
+        <p>Telecomunicaciones en la industria petrolera y soporte técnico en El Tigre.</p>
+      </li>
+      <li>
+        <div class="verbo">Mantener</div>
+        <p class="donde">Dígitro Tecnologia, Brasil, desde 2022</p>
+        <p>Service Desk para clientes del sector público: incidentes, monitoreo de entornos y proyectos de implantación.</p>
+      </li>
+      <li>
+        <div class="verbo">Construir</div>
+        <p class="donde">Desarrollo independiente con IA, desde 2026</p>
+        <p>Seis sistemas web en producción y más de 2.600 commits en un año.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="contenedor seccion" id="proyectos" aria-labelledby="titulo-proyectos">
+    <h2 id="titulo-proyectos">Proyectos</h2>
+
+    <article class="destacado">
+      <div>
+        <h3>Global-VZLA App</h3>
+        <p>Una plataforma que une en un solo lugar todo un negocio de marketing de afiliados: productos, campañas de Google Ads, rastreo de ventas y un análisis con IA. Reemplazó siete herramientas sueltas que no se pasaban datos.</p>
+        <p class="tec">React, TypeScript, PHP 8, MySQL, API de Google Ads y API de Claude.</p>
+        <a class="boton principal" href="proyectos/global-vzla-app.html">Ver el caso completo</a>
+      </div>
+      <dl class="cifras">
+        <div><dt>Módulos conectados</dt><dd>10</dd></div>
+        <div><dt>Commits</dt><dd>547</dd></div>
+        <div><dt>Archivos de pruebas</dt><dd>227</dd></div>
+        <div><dt>Idiomas</dt><dd>3</dd></div>
+      </dl>
+    </article>
+
+    <ul class="otros">
+      <li>
+        <span class="nombre">FinanceIA</span>
+        <p>Sistema financiero de una empresa de estructuras metálicas. Lee extractos del banco con IA, factura y arma presupuestos en PDF.</p>
+        <span class="estado">Caso en preparación</span>
+      </li>
+      <li>
+        <span class="nombre">CALC</span>
+        <p>Cálculo de estructuras metálicas: de la lista de piezas salen el peso, las barras a comprar, el precio, los planos y una vista 3D.</p>
+        <span class="estado">Caso en preparación</span>
+      </li>
+      <li>
+        <span class="nombre">Sitio y blog automático</span>
+        <p>Sitio de Pablo's Serralheria con un blog que publica un artículo por semana sin intervención manual.</p>
+        <a class="estado" href="https://pabloserralheria.com" rel="noopener">pabloserralheria.com</a>
+      </li>
+      <li>
+        <span class="nombre">Global Trends Digest</span>
+        <p>Sitio de reseñas en tres idiomas, generado con scripts en Python y pensado para aparecer en Google y Bing.</p>
+        <a class="estado" href="https://globaltrendsdigest.com" rel="noopener">globaltrendsdigest.com</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="contenedor seccion" id="como-trabajo" aria-labelledby="titulo-trabajo">
+    <h2 id="titulo-trabajo">Cómo trabajo con IA</h2>
+    <p class="intro">Trabajo con agentes de IA como Claude Code. La IA escribe gran parte del código; yo decido qué se hace, en qué orden y cuándo está bien hecho.</p>
+    <ol class="pasos">
+      <li><p><strong>Defino el problema.</strong> Qué tiene que resolver el sistema, para quién y con qué reglas.</p></li>
+      <li><p><strong>Apruebo el diseño.</strong> Cada parte tiene un plan escrito antes de construirse.</p></li>
+      <li><p><strong>Construyo con pruebas.</strong> Pruebas automáticas que avisan si algo se rompe.</p></li>
+      <li><p><strong>Reviso y pongo en producción.</strong> Pruebo en el navegador, subo por SSH y verifico que todo quedó igual.</p></li>
+    </ol>
+  </section>
+
+  <section class="contenedor contacto" id="contacto" aria-labelledby="titulo-contacto">
+    <h2 id="titulo-contacto">Contacto</h2>
+    <p>Busco puestos de IT, soporte, telecomunicaciones u operaciones digitales. Trabajo en Brasil y Venezuela sin visa, presencial, híbrido o remoto.</p>
+    <dl>
+      <dt>Correo</dt><dd><a href="mailto:pablorauseo@gmail.com">pablorauseo@gmail.com</a></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/pablo-francisco-navarreto-rauseo-47a374164/" rel="noopener">Pablo Francisco Navarreto Rauseo</a></dd>
+      <dt>CV</dt><dd><a href="cv/CV_Pablo_Navarreto_Rauseo_ES.pdf">Español</a>, <a href="cv/CV_Pablo_Navarreto_Rauseo_PT.pdf">Português</a>, <a href="cv/CV_Pablo_Navarreto_Rauseo_EN.pdf">English</a></dd>
+    </dl>
+  </section>
+</main>
+
+<footer class="contenedor pie">
+  <p>Los proyectos son privados. Lo que se muestra aquí no incluye datos reales de clientes.</p>
+</footer>
+
+</body>
+</html>
