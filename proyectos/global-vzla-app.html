@@ -5,26 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Global-VZLA App</title>
   <meta name="description" content="Caso de estudio: plataforma modular para un negocio de afiliados, con React, PHP 8, MySQL, Google Ads e IA. Por Pablo Navarreto.">
+  <link rel="canonical" href="https://pablo-navarreto.github.io/proyectos/global-vzla-app.html">
+  <link rel="alternate" hreflang="es" href="https://pablo-navarreto.github.io/proyectos/global-vzla-app.html">
+  <link rel="alternate" hreflang="pt" href="https://pablo-navarreto.github.io/pt/projetos/global-vzla-app.html">
+  <link rel="alternate" hreflang="en" href="https://pablo-navarreto.github.io/en/projects/global-vzla-app.html">
+  <link rel="alternate" hreflang="x-default" href="https://pablo-navarreto.github.io/proyectos/global-vzla-app.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Global-VZLA App">
+  <meta property="og:description" content="Caso de estudio: plataforma modular para un negocio de afiliados, con React, PHP 8, MySQL, Google Ads e IA. Por Pablo Navarreto.">
+  <meta property="og:url" content="https://pablo-navarreto.github.io/proyectos/global-vzla-app.html">
+  <meta property="og:image" content="https://pablo-navarreto.github.io/compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../estilos.css">
+  <link rel="stylesheet" href="/estilos.css">
 </head>
 <body>
 
 <header class="contenedor barra">
-  <a class="marca" href="../">Pablo Navarreto</a>
-  <nav aria-label="Secciones del caso">
+  <a class="marca" href="/">Pablo Navarreto</a>
+  <nav aria-label="Proyectos">
     <a href="#problema">Problema</a>
     <a href="#arquitectura">Arquitectura</a>
     <a href="#seguridad">Seguridad</a>
-    <a href="../#contacto">Contacto</a>
+    <a href="/#contacto">Contacto</a>
   </nav>
+  <div class="idiomas" role="group" aria-label="Idioma"><a href="/proyectos/global-vzla-app.html" hreflang="es" lang="es" data-idioma="es" aria-current="true">ES</a><a href="/pt/projetos/global-vzla-app.html" hreflang="pt" lang="pt" data-idioma="pt">PT</a><a href="/en/projects/global-vzla-app.html" hreflang="en" lang="en" data-idioma="en">EN</a></div>
 </header>
 
 <main>
   <section class="contenedor caso-portada">
-    <a class="volver" href="../">Volver a proyectos</a>
+    <a class="volver" href="/#proyectos">Volver a proyectos</a>
     <h1>Global-VZLA App</h1>
     <p class="intro">Una sola plataforma para manejar un negocio de marketing de afiliados de punta a punta: productos, páginas de venta, campañas de Google Ads, rastreo de ventas y un análisis de resultados con IA.</p>
     <dl class="ficha">
@@ -73,31 +88,18 @@
   <section class="contenedor seccion" id="arquitectura" aria-labelledby="t-arq">
     <h2 id="t-arq">Cómo está armado</h2>
     <p>Tres capas separadas. Las pantallas nunca hablan directo con Google ni con la IA: todo pasa por el servidor, que es el único que guarda las claves.</p>
-
     <div class="capas" role="img" aria-label="Diagrama: el navegador con React habla con el servidor PHP, que habla con la base de datos MariaDB y con las APIs de Google Ads y de Claude.">
-      <div class="capa">
-        <h3>Pantallas</h3>
-        <p class="tec">React + TypeScript</p>
-        <p>Lo que ve el usuario en el navegador. Un solo cliente habla con el servidor.</p>
-      </div>
+      <div class="capa"><h3>Pantallas</h3><p class="tec">React + TypeScript</p><p>Lo que ve el usuario en el navegador. Un solo cliente habla con el servidor.</p></div>
       <div class="enlace"><span>pedidos y respuestas en JSON</span></div>
       <div>
-        <div class="capa">
-          <h3>Servidor</h3>
-          <p class="tec">PHP 8, sin framework</p>
-          <p>Revisa sesión y permisos, aplica las reglas del negocio y habla con los servicios externos.</p>
-        </div>
+        <div class="capa"><h3>Servidor</h3><p class="tec">PHP 8, sin framework</p><p>Revisa sesión y permisos, aplica las reglas del negocio y habla con los servicios externos.</p></div>
         <div class="externos">
           <div class="capa"><h3>API de Google Ads</h3><p>Campañas y métricas, con inicio de sesión OAuth.</p></div>
           <div class="capa"><h3>API de Claude</h3><p>Análisis con IA. Se registra el costo de cada uso.</p></div>
         </div>
       </div>
       <div class="enlace"><span>consultas SQL</span></div>
-      <div class="capa">
-        <h3>Base de datos</h3>
-        <p class="tec">MariaDB (MySQL)</p>
-        <p>66 tablas. Cada fila sabe a qué cliente pertenece.</p>
-      </div>
+      <div class="capa"><h3>Base de datos</h3><p class="tec">MariaDB (MySQL)</p><p>66 tablas. Cada fila sabe a qué cliente pertenece.</p></div>
     </div>
   </section>
 
@@ -124,14 +126,14 @@
     <div class="viaje" id="viaje">
       <span class="pulso" aria-hidden="true"></span>
       <ol>
-      <li><span class="num">1</span><div><h3>La pantalla envía el formulario</h3><p>React manda los datos al servidor en formato JSON, junto con la sesión del usuario.</p></div></li>
-      <li><span class="num">2</span><div><h3>Una sola puerta de entrada</h3><p>Todos los pedidos entran por el mismo archivo del servidor, que los pasa a la lista de rutas.</p></div></li>
-      <li><span class="num">3</span><div><h3>Controles antes de hacer nada</h3><p>Se bloquean pedidos que vienen de otros sitios, se revisa que la sesión sea válida y que el usuario tenga permiso para editar productos.</p></div></li>
-      <li><span class="num">4</span><div><h3>Se validan los datos</h3><p>El módulo Productos revisa que todo esté bien antes de guardar.</p></div></li>
-      <li><span class="num">5</span><div><h3>Se guarda de forma segura</h3><p>El guardado usa consultas preparadas, para que nadie pueda meter código malicioso en la base.</p></div></li>
-      <li><span class="num">6</span><div><h3>Cada dato en su ambiente</h3><p>El producto queda marcado con el cliente al que pertenece, para que los datos nunca se mezclen.</p></div></li>
-      <li><span class="num">7</span><div><h3>Queda registrado</h3><p>La auditoría anota quién hizo qué y cuándo.</p></div></li>
-      <li><span class="num">8</span><div><h3>Respuesta a la pantalla</h3><p>El servidor devuelve el número del producto nuevo y la pantalla abre su ficha.</p></div></li>
+        <li><span class="num">1</span><div><h3>La pantalla envía el formulario</h3><p>React manda los datos al servidor en formato JSON, junto con la sesión del usuario.</p></div></li>
+        <li><span class="num">2</span><div><h3>Una sola puerta de entrada</h3><p>Todos los pedidos entran por el mismo archivo del servidor, que los pasa a la lista de rutas.</p></div></li>
+        <li><span class="num">3</span><div><h3>Controles antes de hacer nada</h3><p>Se bloquean pedidos que vienen de otros sitios, se revisa que la sesión sea válida y que el usuario tenga permiso para editar productos.</p></div></li>
+        <li><span class="num">4</span><div><h3>Se validan los datos</h3><p>El módulo Productos revisa que todo esté bien antes de guardar.</p></div></li>
+        <li><span class="num">5</span><div><h3>Se guarda de forma segura</h3><p>El guardado usa consultas preparadas, para que nadie pueda meter código malicioso en la base.</p></div></li>
+        <li><span class="num">6</span><div><h3>Cada dato en su ambiente</h3><p>El producto queda marcado con el cliente al que pertenece, para que los datos nunca se mezclen.</p></div></li>
+        <li><span class="num">7</span><div><h3>Queda registrado</h3><p>La auditoría anota quién hizo qué y cuándo.</p></div></li>
+        <li><span class="num">8</span><div><h3>Respuesta a la pantalla</h3><p>El servidor devuelve el número del producto nuevo y la pantalla abre su ficha.</p></div></li>
       </ol>
     </div>
   </section>
@@ -183,8 +185,8 @@
       <p>Mi trabajo se parece al de un líder técnico: decidir qué se hace, en qué orden y cuándo está bien hecho.</p>
     </div>
     <div class="siguiente">
-      <a class="boton principal" href="../#contacto">Hablemos</a>
-      <a class="boton" href="../#proyectos">Ver otros proyectos</a>
+      <a class="boton principal" href="/#contacto">Hablemos</a>
+      <a class="boton" href="/#proyectos">Ver otros proyectos</a>
     </div>
   </section>
 </main>
@@ -192,9 +194,12 @@
 <footer class="contenedor pie">
   <p>El código es privado. Esta página describe el sistema sin mostrar datos reales del negocio.</p>
 </footer>
-
 <script>
-  // Un solo momento animado: el pulso recorre la línea cuando el viaje entra en pantalla.
+  document.querySelectorAll('.idiomas a').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('idioma', a.dataset.idioma); } catch (e) {} });
+  });
+</script>
+<script>
   (function () {
     var viaje = document.getElementById('viaje');
     if (!viaje || !('IntersectionObserver' in window)) return;

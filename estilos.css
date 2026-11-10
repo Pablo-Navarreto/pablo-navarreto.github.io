@@ -301,3 +301,18 @@ p { margin: 0 0 1rem; max-width: var(--texto); }
 .cifras-seis { grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 40rem) { .cifras-seis { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 64rem) { .cifras-seis { grid-template-columns: repeat(6, 1fr); } }
+
+/* Selector de idioma */
+.barra { flex-wrap: wrap; }
+.idiomas { display: inline-flex; border: 1px solid var(--linea); border-radius: 6px; overflow: hidden; }
+.idiomas a {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 2.75rem; min-height: 2.5rem; padding: 0 0.6rem;
+  font-weight: 700; font-size: 0.9rem; color: var(--suave); text-decoration: none;
+}
+.idiomas a + a { border-left: 1px solid var(--linea); }
+.idiomas a:hover { color: var(--tinta); }
+.idiomas a[aria-current="true"] { background: var(--petroleo); color: var(--fondo); }
+@media (max-width: 40rem) {
+  .barra nav { order: 3; width: 100%; }
+}

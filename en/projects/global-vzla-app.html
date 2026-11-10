@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global-VZLA App</title>
+  <meta name="description" content="Case study: modular platform for an affiliate business, built with React, PHP 8, MySQL, Google Ads and AI. By Pablo Navarreto.">
+  <link rel="canonical" href="https://pablo-navarreto.github.io/en/projects/global-vzla-app.html">
+  <link rel="alternate" hreflang="es" href="https://pablo-navarreto.github.io/proyectos/global-vzla-app.html">
+  <link rel="alternate" hreflang="pt" href="https://pablo-navarreto.github.io/pt/projetos/global-vzla-app.html">
+  <link rel="alternate" hreflang="en" href="https://pablo-navarreto.github.io/en/projects/global-vzla-app.html">
+  <link rel="alternate" hreflang="x-default" href="https://pablo-navarreto.github.io/proyectos/global-vzla-app.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Global-VZLA App">
+  <meta property="og:description" content="Case study: modular platform for an affiliate business, built with React, PHP 8, MySQL, Google Ads and AI. By Pablo Navarreto.">
+  <meta property="og:url" content="https://pablo-navarreto.github.io/en/projects/global-vzla-app.html">
+  <meta property="og:image" content="https://pablo-navarreto.github.io/compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+
+<header class="contenedor barra">
+  <a class="marca" href="/en/">Pablo Navarreto</a>
+  <nav aria-label="Projects">
+    <a href="#problema">Problem</a>
+    <a href="#arquitectura">Architecture</a>
+    <a href="#seguridad">Security</a>
+    <a href="/en/#contacto">Contact</a>
+  </nav>
+  <div class="idiomas" role="group" aria-label="Language"><a href="/proyectos/global-vzla-app.html" hreflang="es" lang="es" data-idioma="es">ES</a><a href="/pt/projetos/global-vzla-app.html" hreflang="pt" lang="pt" data-idioma="pt">PT</a><a href="/en/projects/global-vzla-app.html" hreflang="en" lang="en" data-idioma="en" aria-current="true">EN</a></div>
+</header>
+
+<main>
+  <section class="contenedor caso-portada">
+    <a class="volver" href="/en/#proyectos">Back to projects</a>
+    <h1>Global-VZLA App</h1>
+    <p class="intro">One platform to run an affiliate marketing business end to end: products, sales pages, Google Ads campaigns, sales tracking and AI analysis of results.</p>
+    <dl class="ficha">
+      <div><dt>My role</dt><dd>Design, direction and deployment</dd></div>
+      <div><dt>Year</dt><dd>2026</dd></div>
+      <div><dt>Status</dt><dd>In production</dd></div>
+      <div><dt>Stack</dt><dd>React, TypeScript, PHP 8, MySQL</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="problema" aria-labelledby="t-problema">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-problema">The problem</h2>
+        <p>The business ran on seven separate tools, built at different times, that didn't share data with each other.</p>
+        <ul>
+          <li>The same product was entered four times, once in each tool.</li>
+          <li>Google results were loaded by hand and eventually stopped being loaded, so the analysis had no data.</li>
+          <li>Campaigns could be created, but not managed afterwards.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>The solution</h2>
+        <p>A single application where the product is the center and everything else hangs from it. It's entered once and every module uses it.</p>
+        <ul>
+          <li>Google data comes in on its own every day at 6 a.m.</li>
+          <li>Campaigns are created and managed from the same screen.</li>
+          <li>The AI reads the results and builds a report with what needs a decision today.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-cifras">
+    <h2 id="t-cifras">By the numbers</h2>
+    <dl class="cifras cifras-seis">
+      <div><dt>Modules</dt><dd>10</dd></div>
+      <div><dt>Database tables</dt><dd>66</dd></div>
+      <div><dt>Test files</dt><dd>227</dd></div>
+      <div><dt>Commits</dt><dd>547</dd></div>
+      <div><dt>Lines of code</dt><dd>100k</dd></div>
+      <div><dt>Languages</dt><dd>3</dd></div>
+    </dl>
+  </section>
+
+  <section class="contenedor seccion" id="arquitectura" aria-labelledby="t-arq">
+    <h2 id="t-arq">How it's built</h2>
+    <p>Three separate layers. The screens never talk directly to Google or the AI: everything goes through the server, the only place that holds the keys.</p>
+    <div class="capas" role="img" aria-label="Diagram: the React browser app talks to the PHP server, which talks to the MariaDB database and to the Google Ads and Claude APIs.">
+      <div class="capa"><h3>Screens</h3><p class="tec">React + TypeScript</p><p>What the user sees in the browser. A single client talks to the server.</p></div>
+      <div class="enlace"><span>JSON requests and responses</span></div>
+      <div>
+        <div class="capa"><h3>Server</h3><p class="tec">PHP 8, no framework</p><p>Checks session and permissions, applies business rules and talks to external services.</p></div>
+        <div class="externos">
+          <div class="capa"><h3>Google Ads API</h3><p>Campaigns and metrics, with OAuth sign-in.</p></div>
+          <div class="capa"><h3>Claude API</h3><p>AI analysis. The cost of each call is logged.</p></div>
+        </div>
+      </div>
+      <div class="enlace"><span>SQL queries</span></div>
+      <div class="capa"><h3>Database</h3><p class="tec">MariaDB (MySQL)</p><p>66 tables. Every row knows which client it belongs to.</p></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-modulos">
+    <h2 id="t-modulos">The 10 modules</h2>
+    <p>A module never reads another module's tables: it asks for the data through that module's own door. That way each one can change without breaking the rest.</p>
+    <div class="modulos">
+      <div class="modulo centro"><strong>Products</strong><span>Each product's record: network, affiliate link, payout and countries. The center of everything.</span></div>
+      <div class="modulo"><strong>Campaigns</strong><span>Create and manage Google Ads campaigns: budget, bids, pausing.</span></div>
+      <div class="modulo"><strong>Tracker</strong><span>Logs visits and sales, and tells Google which ad brought each sale.</span></div>
+      <div class="modulo"><strong>Brain</strong><span>Analyzes results and builds a report with AI.</span></div>
+      <div class="modulo"><strong>Scout</strong><span>Offers found by a Python bot. One button turns them into products.</span></div>
+      <div class="modulo"><strong>Pages</strong><span>Sales and blog pages for each product, with their visits and sales.</span></div>
+      <div class="modulo"><strong>Assets</strong><span>Business accounts and access.</span></div>
+      <div class="modulo"><strong>Connections</strong><span>Status of the connection to Google, the AI and the daily routine.</span></div>
+      <div class="modulo"><strong>Administration</strong><span>Users, permissions, environments, audit log and usage.</span></div>
+      <div class="modulo"><strong>Home</strong><span>The key numbers and what needs a decision today.</span></div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-viaje">
+    <h2 id="t-viaje">The journey of one record</h2>
+    <p>What happens, step by step, when someone creates a new product and clicks Save.</p>
+    <div class="viaje" id="viaje">
+      <span class="pulso" aria-hidden="true"></span>
+      <ol>
+        <li><span class="num">1</span><div><h3>The screen sends the form</h3><p>React sends the data to the server as JSON, along with the user's session.</p></div></li>
+        <li><span class="num">2</span><div><h3>A single entry point</h3><p>Every request comes in through the same server file, which hands it to the route list.</p></div></li>
+        <li><span class="num">3</span><div><h3>Checks before anything else</h3><p>Requests from other sites are blocked, and the server checks the session is valid and the user can edit products.</p></div></li>
+        <li><span class="num">4</span><div><h3>The data is validated</h3><p>The Products module checks everything is right before saving.</p></div></li>
+        <li><span class="num">5</span><div><h3>Saved safely</h3><p>Saving uses prepared statements, so nobody can inject malicious code into the database.</p></div></li>
+        <li><span class="num">6</span><div><h3>Every record in its environment</h3><p>The product is tagged with the client it belongs to, so data never gets mixed.</p></div></li>
+        <li><span class="num">7</span><div><h3>It's logged</h3><p>The audit log records who did what and when.</p></div></li>
+        <li><span class="num">8</span><div><h3>Response to the screen</h3><p>The server returns the new product's ID and the screen opens its record.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" id="seguridad" aria-labelledby="t-seg">
+    <h2 id="t-seg">Security</h2>
+    <p>This system handles Google accounts and campaign money, so security was designed in from the start.</p>
+    <table class="tabla">
+      <tbody>
+        <tr><th scope="row">Passwords</th><td>Stored with bcrypt hashing, never as plain text.</td></tr>
+        <tr><th scope="row">Sensitive data</th><td>Encrypted with AES-256-GCM.</td></tr>
+        <tr><th scope="row">Google and AI keys</th><td>Only on the server, outside the public folder and outside Git.</td></tr>
+        <tr><th scope="row">Login attempts</th><td>Rate limit per IP and Cloudflare bot check.</td></tr>
+        <tr><th scope="row">Forged requests from other sites</th><td>Blocked before they reach the logic (CSRF protection).</td></tr>
+        <tr><th scope="row">Permissions</th><td>Per module: no access, view only or edit.</td></tr>
+        <tr><th scope="row">Client separation</th><td>Every business table knows which client each row belongs to.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-calidad">
+    <div class="dos-col">
+      <div>
+        <h2 id="t-calidad">Quality and delivery</h2>
+        <ul>
+          <li>227 automated test files: PHPUnit on the server and Vitest on the screens.</li>
+          <li>Google connections are tested with simulated responses, without touching real accounts.</li>
+          <li>Every part has a written, approved design before it's built.</li>
+          <li>Every bug is documented with its cause, its fix and how to check it.</li>
+          <li>Deployment over SSH, comparing every file with the repository.</li>
+          <li>Data from the old tools migrated with scripts that never create duplicates.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>What I'd do next</h2>
+        <ul>
+          <li>Automatic deployment with GitHub Actions that tests and publishes on every change.</li>
+          <li>A dedicated server as users grow; shared hosting has limits.</li>
+          <li>Automatic alerts when something fails, instead of checking the dashboard.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor seccion" aria-labelledby="t-papel">
+    <div class="papel">
+      <h2 id="t-papel">My role</h2>
+      <p>I built this system with AI agents (Claude Code). I defined the problem, the rules and the order of work, approved every design, reviewed and tested every phase and deployed it to production. The AI wrote most of the code under those rules.</p>
+      <p>My work is close to a tech lead's: deciding what gets built, in what order and when it's done right.</p>
+    </div>
+    <div class="siguiente">
+      <a class="boton principal" href="/en/#contacto">Let's talk</a>
+      <a class="boton" href="/en/#proyectos">See other projects</a>
+    </div>
+  </section>
+</main>
+
+<footer class="contenedor pie">
+  <p>The code is private. This page describes the system without showing real business data.</p>
+</footer>
+<script>
+  document.querySelectorAll('.idiomas a').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('idioma', a.dataset.idioma); } catch (e) {} });
+  });
+</script>
+<script>
+  (function () {
+    var viaje = document.getElementById('viaje');
+    if (!viaje || !('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { viaje.classList.add('activo'); obs.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    obs.observe(viaje);
+  })();
+</script>
+</body>
+</html>
