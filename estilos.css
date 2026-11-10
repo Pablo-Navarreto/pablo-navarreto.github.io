@@ -316,3 +316,19 @@ p { margin: 0 0 1rem; max-width: var(--texto); }
 @media (max-width: 40rem) {
   .barra nav { order: 3; width: 100%; }
 }
+
+/* Capturas del sistema (datos de demostración) */
+.capturas { display: grid; gap: 1.75rem; margin-top: 2rem; }
+@media (min-width: 56rem) {
+  .capturas { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .capturas figure:first-child { grid-column: 1 / -1; }
+}
+.capturas figure { margin: 0; }
+.capturas a {
+  display: block; border: 1px solid var(--linea); border-radius: 10px; overflow: hidden;
+  background: var(--superficie);
+}
+.capturas a:hover, .capturas a:focus-visible { border-color: var(--petroleo); }
+.capturas img { width: 100%; height: auto; }
+.capturas figcaption { margin-top: 0.6rem; color: var(--suave); font-size: 0.95rem; }
+.capturas figcaption strong { color: var(--tinta); display: block; }
