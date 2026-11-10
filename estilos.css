@@ -159,6 +159,7 @@ p { margin: 0 0 1rem; max-width: var(--texto); }
   padding: 1.5rem;
 }
 @media (min-width: 56rem) { .destacado { grid-template-columns: 1.1fr 1fr; padding: 2.25rem; align-items: center; } }
+.destacado + .destacado { margin-top: 1.5rem; }
 .destacado h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-stretch: 118%; }
 .destacado .tec { color: var(--suave); }
 
